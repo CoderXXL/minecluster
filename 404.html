@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Minecluster.de</title>
+
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" sizes="192x192" href="img/android-desktop.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+
+    <link rel="apple-touch-icon-precomposed" href="img/ios-desktop.png">
+    <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="/css/404.css">
+</head>
+<body>
+<div class="darkoverlay show"></div>
+<div class="lockscreen error show">
+    <div class="content">
+        <div class="title">
+            <img src="https://crafatar.com/avatars/ERR_NO_LOGIN?size=90&default=MHF_Steve&overlay">
+        </div>
+        <div class="text">
+            <center><h1>404</h1></center>
+            <center><h3>Page not found.</h3></center>
+        </div>
+    </div>
+</div>
+<div class="notifybox">
+    <div class="text"></div>
+</div>
+<script src="js/jquery-3.1.1.slim.min.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+    document.oncontextmenu=new Function("return false;");$("img").on("dragstart",function(){return false});var adress = "%websocket%";
+</script>
+<script src="js/script.js"></script>
+<script src="js/websocket.js"></script>
+</body>
+</html>
