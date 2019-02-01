@@ -56,6 +56,10 @@ strong {
   font-weight: 700;
 }
 
+.yellow {
+  color: #f1c11a;
+}
+
 #about,
 #feature,
 #contact {
