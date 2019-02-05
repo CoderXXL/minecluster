@@ -1,0 +1,69 @@
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: rgb(31, 31, 31);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  margin-top: 15%;
+}
+
+h1, h2, p.teaser {
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h2.subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f1c11a;
+  margin: 0;
+}
+
+.subtitle {
+  &::before {
+    content: "» ";
+  }
+  &::after {
+    content: " «";
+  }
+}
+
+p.teaser {
+  margin: 2rem 0 3rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+div.buttons {
+  button {
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.3;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 36px;
+    font-size: 18px;
+    background: transparent;
+    border: 3px solid #ffffff;
+
+    &:last-child {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      transition: .7s;
+      background: #f1c11a;
+      border: 3px solid #f1c11a;
+    }
+  }
+}
