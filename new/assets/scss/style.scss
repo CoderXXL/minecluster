@@ -3,6 +3,29 @@ body {
   background-color: rgb(31, 31, 31);
 }
 
+#loading {
+  transition:.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 99;
+  animation: blur .5s;
+  pointer-events: none;
+}
+
+#start-fade {
+  animation: blur 1s;
+  transition: 1s;
+  opacity: 0;
+}
+
+
 .main {
   display: flex;
   align-items: center;
@@ -17,6 +40,8 @@ h1, h2, p.teaser {
 }
 
 h1 {
+  margin: 0;
+  animation: fadeUp 1s;
   font-size: 3rem;
   margin-bottom: 10px;
   font-weight: 700;
@@ -45,6 +70,8 @@ p.teaser {
 }
 
 div.buttons {
+  animation: fadeUp 2s;
+
   a {
     text-decoration: none;
     cursor: pointer;
@@ -71,6 +98,7 @@ div.buttons {
 }
 
 .card {
+  animation: fadeUp 1s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +120,7 @@ div.buttons {
 }
 
 .impressum {
-  margin: 10rem auto;
+  margin: auto;
   padding: 2rem;
   width: 70%;
 
@@ -104,5 +132,23 @@ div.buttons {
 
   a {
     color: darken($color: grey, $amount: 10);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    margin-top: 50px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes blur {
+  from {
+    filter: blur(2px);
+  }
+  to {
+    filter: blur(0);
   }
 }

@@ -11,6 +11,21 @@
 </head>
 
 <body>
+  <div id="loading">
+      <svg width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"
+        class="lds-eclipse">
+        <path ng-attr-d="{{config.pathCmd}}" ng-attr-fill="{{config.color}}" stroke="none" d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50"
+          fill="black" transform="rotate(95.6754 50 51)">
+          <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51;360 50 51" keyTimes="0;1"
+            dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
+        </path>
+      </svg>
+  </div>
+
+  <!-- top space -->
+    <div style="height: 10rem;"></div>
+  <!-- end -->
+
   <div class="card main impressum">
     <h2>Alle angaben gemäß § 5 TMG:</h2>
     <h2>Kontakt:</h2>
@@ -154,6 +169,7 @@
   </div>
 
 </body>
+<script src="./assets/js/script.js"></script>
 <footer>
   <p>Quelle: <em><a href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de</a></em></p>
   <p></p>

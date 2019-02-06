@@ -3,6 +3,26 @@ body {
   font-family: 'Rajdhani', sans-serif;
   background-color: #1f1f1f; }
 
+#loading {
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 99;
+  animation: blur .5s;
+  pointer-events: none; }
+
+#start-fade {
+  animation: blur 1s;
+  transition: 1s;
+  opacity: 0; }
+
 .main {
   display: flex;
   align-items: center;
@@ -15,6 +35,8 @@ h1, h2, p.teaser {
   color: white; }
 
 h1 {
+  margin: 0;
+  animation: fadeUp 1s;
   font-size: 3rem;
   margin-bottom: 10px;
   font-weight: 700; }
@@ -35,26 +57,29 @@ p.teaser {
   font-weight: 500;
   font-size: 1rem; }
 
-div.buttons a {
-  text-decoration: none;
-  cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
-  line-height: 1.3;
-  color: #ffffff;
-  font-weight: 700;
-  letter-spacing: 1px;
-  padding: 14px 36px;
-  font-size: 18px;
-  background: transparent;
-  border: 3px solid #ffffff; }
-  div.buttons a:last-child {
-    margin-left: 1rem; }
-  div.buttons a:hover {
-    transition: .7s;
-    background: #f1c11a;
-    border: 3px solid #f1c11a; }
+div.buttons {
+  animation: fadeUp 2s; }
+  div.buttons a {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.3;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 36px;
+    font-size: 18px;
+    background: transparent;
+    border: 3px solid #ffffff; }
+    div.buttons a:last-child {
+      margin-left: 1rem; }
+    div.buttons a:hover {
+      transition: .7s;
+      background: #f1c11a;
+      border: 3px solid #f1c11a; }
 
 .card {
+  animation: fadeUp 1s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +97,7 @@ div.buttons a {
   width: 20rem; }
 
 .impressum {
-  margin: 10rem auto;
+  margin: auto;
   padding: 2rem;
   width: 70%; }
   .impressum h1, .impressum h2 {
@@ -81,5 +106,16 @@ div.buttons a {
     margin-bottom: 1rem; }
   .impressum a {
     color: #676767; }
+
+@keyframes fadeUp {
+  from {
+    margin-top: 50px; }
+  to {
+    margin-top: 0; } }
+@keyframes blur {
+  from {
+    filter: blur(2px); }
+  to {
+    filter: blur(0); } }
 
 /*# sourceMappingURL=style.css.map */
