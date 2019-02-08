@@ -43,7 +43,6 @@ h1 {
   margin: 0;
   animation: fadeUp 1s;
   font-size: 3rem;
-  margin-bottom: 10px;
   font-weight: 700;
 }
 
@@ -52,6 +51,7 @@ h2.subtitle {
   font-weight: 500;
   color: #f1c11a;
   margin: 0;
+  margin-top: 10px;
 }
 
 .subtitle {
@@ -70,7 +70,7 @@ p.teaser {
 }
 
 div.buttons {
-  animation: fadeUp 2s;
+  animation: 1s forwards 1 fadeUp;
 
   a {
     text-decoration: none;
@@ -98,12 +98,11 @@ div.buttons {
 }
 
 .card {
-  animation: fadeUp 1s;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  color: grey;
+  color: #1f1f1f;
   background-color: #ffffff;
   border-radius: 3px;
 
@@ -114,19 +113,24 @@ div.buttons {
 }
 
 .not-found {
-  margin: 15% auto;
+  margin: auto;
   height: 15rem;
   width: 20rem;
 }
 
 .impressum {
+  opacity: 0;
+  animation: 1s forwards 1 fadeUp;
+  animation-delay: 1s;
   margin: auto;
   padding: 2rem;
   width: 70%;
 
   h1, h2 {
     margin: 0;
+    animation-delay: 1s;
     color: rgb(31, 31, 31);
+
     margin-bottom: 1rem;
   }
 
@@ -135,11 +139,66 @@ div.buttons {
   }
 }
 
+.border {
+  border: white solid 2.5px;
+  border-radius: 2px;
+  opacity: 0;
+  animation:  1s forwards 1 borderSwipe;
+  animation-delay: .2s;
+}
+
+.apply {
+  padding: 20px;
+  opacity: 0;
+  animation: 1s forwards 1 fadeUp;
+  animation-delay: 1s;
+  width: 60%;
+  margin:0 auto 10rem auto;
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    align-items: center;
+    a {
+      margin: 10px 0;
+      background-color: rgb(31, 31, 31);
+      padding-left: 25%;
+      padding-right: 25%;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  .supporter {
+    border-color: #26C213;
+  }
+
+  .builder {
+    border-color: grey;
+  }
+  .developer {
+    border-color: #0DE5D4;
+  }
+}
+
+@keyframes borderSwipe {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 8px);
+    opacity: 1;
+
+  }
+}
+
 @keyframes fadeUp {
   from {
     margin-top: 50px;
   }
   to {
+    opacity: 1;
     margin-top: 0;
   }
 }
